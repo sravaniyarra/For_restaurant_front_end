@@ -1,0 +1,31 @@
+.card{
+    background-color: brown;
+}
+.card-body{
+    color: white;
+}
+.demo{
+    background-color: brown;
+    border-color: brown ;
+    border-radius: 3px;
+    margin-left: 5%;
+    margin-top: 5%;
+    margin-bottom: 0%;
+}
+h1{
+    text-align: center;
+    margin: auto;
+    color: brown;
+}
+.input-group{
+    margin-top: 2%;
+    margin-left: 70%;
+    width: 400px;
+   
+  }
+  .modal-title{
+      text-align: center;
+  }
+  .btn-primary{
+    margin-left: 90%;
+  }

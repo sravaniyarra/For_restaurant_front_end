@@ -1,0 +1,141 @@
+{
+  "products": [
+    {
+      "name": "Hyderabadi-chicken biryani",
+      "category": "Biryani",
+      "description": "Chicken Biryani",
+      "imageUrl": "./assets/images/Hyderabadi_Chicken_Biryani_750x500_wiki_Garrett Ziegler.jpg",
+      "price": 3120,
+      "id": 1
+    },
+    {
+      "name": "chicken_pizza",
+      "category": "Pizza",
+      "description": "chicken pizza",
+      "imageUrl": "./assets/images/1610716314_untitled-design-2021-01-15t184025.049.avif",
+      "price": 600,
+      "id": 2,
+      "qty": 5
+    },
+    {
+      "name": "Burger",
+      "category": "Burgers",
+      "description": "Tasty Burger",
+      "imageUrl": "./assets/images/wwj1hrnad01x.jpg",
+      "price": 400,
+      "id": 3
+    },
+    {
+      "name": "Coco Cola",
+      "category": "Soft Drinks",
+      "description": "Coco Cola",
+      "imageUrl": "./assets/images/bottle-coca-cola-png-transparent-2.png",
+      "price": 500,
+      "id": 4
+    },
+    {
+      "name": "Mazza",
+      "category": "Soft Drinks",
+      "description": "its sweet",
+      "price": 50,
+      "imageUrl": "./assets/images/maaza-mango-fruit-drink-bottle-500x500.png",
+      "id": 5
+    },
+    {
+      "name": "Fry-piece Chicken biryani",
+      "category": "Biryani",
+      "description": "Fry-piece chicken biryani with Raitha and boiled eg",
+      "price": 500,
+      "imageUrl": "./assets/images/thumb__700_0_0_0_auto.jpg",
+      "id": 5
+    },
+    {
+      "name": "chicken_pizza",
+      "category": "Pizza",
+      "description": "chicken pizza",
+      "price": 600,
+      "imageUrl": "./assets/images/1610716314_untitled-design-2021-01-15t184025.049.avif",
+      "qty": 5,
+      "id": 6
+    }
+  ],
+  "wishlist": [],
+  "Admin-signup": [
+    {
+      "username": "sravani",
+      "email": "sravani@gmail.com",
+      "password": "sravani88",
+      "phonenumber": 9963282805,
+      "id": 2
+    },
+    {
+      "username": "Arman",
+      "email": "arman@gmail.com",
+      "phonenumber": 9963282810,
+      "password": "arman11",
+      "id": 3
+    },
+    {
+      "username": "somi",
+      "email": "somi@gmail.com",
+      "phonenumber": 9868756399,
+      "password": "sravs",
+      "id": 4
+    },
+    {
+      "username": "karuna",
+      "email": "karuna@gmail.com",
+      "phonenumber": 678765434,
+      "password": "karuna11",
+      "id": 5
+    },
+    {
+      "username": "Hemalatha",
+      "email": "hemalatha@gmail.com",
+      "password": "hema@123",
+      "phonenumber": "985792320495",
+      "id": 6
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "Sign-up": [
+    {
+      "username": "sravani",
+      "email": "sravani@gmail.com",
+      "phonenumber": 9987466290,
+      "password": "sravani",
+      "id": 9
+    },
+    {
+      "username": "Salini",
+      "email": "salini@gmail.com",
+      "phonenumber": 99632821837,
+      "password": "sravani",
+      "id": 10
+    },
+    {
+      "username": "SidSriram",
+      "email": "sriram@gmail.com",
+      "phonenumber": 83475629574,
+      "password": "sriram564",
+      "id": 11
+    },
+    {
+      "username": "Hemalatha",
+      "email": "hemalatha@gmail.com",
+      "phonenumber": "985792320495",
+      "password": "hema@123",
+      "id": 12
+    }
+  ],
+  "cart": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

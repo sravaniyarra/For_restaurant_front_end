@@ -1,0 +1,58 @@
+ul{
+    list-style-type: none;
+    border: 50%;
+    
+}
+.nav-link{
+  color: #fff;
+  font-size: large;
+}
+
+.butt{
+    display: block;
+    background: rgb(7, 7, 116);
+    border: rgb(77, 10, 107);
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color: #fff;
+}
+.close {
+    position: absolute;
+    right: 1.5rem;
+    top: 0.5rem;
+    font-size: 2rem;
+    font-weight: 900;
+    text-decoration: none;
+    color: inherit;
+  }
+  .error{
+    color: red;
+    border-color: red;
+  }
+ 
+    
+.card-body{
+    background-image:linear-gradient(to top, rgb(20, 178, 76),rgb(222, 86, 22));
+    top:5%;
+    left:30%;
+}
+.main{
+    background-image: url("../mediterranean-cuisine-2378758_1280.jpg");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    background-size: cover;
+
+}
+body, html {
+    height: 100%;
+  }
+  .navbar{
+    background-image: url("../mediterranean-cuisine-2378758_1280.jpg");
+    
+  }

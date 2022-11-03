@@ -1,0 +1,20 @@
+body{
+    background-color: brown;
+    width: 50%;
+    margin-left: 20%;
+    margin-bottom: 2%;
+    padding-bottom: 20%;
+    margin-top: 2%;
+    color: rgb(182, 221, 208);
+}
+.color{
+    box-sizing: border-box;
+    background-image: linear-gradient(pink,green);
+    height: 100%;
+    margin: 0%;
+    background-size: cover;
+    background-position: center;
+}
+h1{
+    text-align: center;
+}

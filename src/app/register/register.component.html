@@ -1,0 +1,32 @@
+<div class="container">
+
+  <h1 style="text-align: center;"><strong>&hearts; Get a free Membership &hearts;</strong></h1>
+    <form action="" [formGroup] = "signupForm" (ngSubmit)="signup()"> 
+      <div class="full">
+        <img id="profile-img" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" class="profile-img-card">
+      <div>
+          <label for="username">Username</label>
+          <input type="text"  formControlName="username"  minlength="3" maxlength="20" required>
+          <span class="text-danger" *ngIf="signupForm.controls['username'].dirty && signupForm.controls['username'].dirty && signupForm.hasError('required','username')">Username required!!</span></div>
+          <div>
+          <label for="email">Email</label>
+          <input type="email"formControlName="email"name="email" required>
+          <span class="text-danger" *ngIf="signupForm.controls['email'].dirty && signupForm.hasError('required','email')">Email required!!</span></div>
+          <div>
+          <label for="password">Password</label>
+          <input type="password" formControlName="password" name="password"  required minlength="6"/>
+          <span class="text-danger" *ngIf="signupForm.controls['password'].dirty && signupForm.hasError('required','password')">Password required!!</span></div>
+          <label for="email">Phone Number</label>
+          <input type="number"formControlName="number"name="number" required minlength="">
+          <span class="text-danger" *ngIf="signupForm.controls['number'].dirty && signupForm.hasError('required','number')">Mobile Number Required</span>
+          <div>
+            <button class="btn" [disabled]="!signupForm.valid">Sign Up</button></div>
+            <a routerLink="/login" style="color: white;">Already registered? Click to login</a>
+        </div>
+          
+   
+
+         
+           
+            
+   

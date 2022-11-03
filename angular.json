@@ -23,9 +23,12 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -64,7 +67,8 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Restaurant:build:production"
+              "browserTarget": "Restaurant:build:production",
+              "proxyConfig": "./Restaurant/proxy.conf.json"
             },
             "development": {
               "browserTarget": "Restaurant:build:development"
@@ -97,5 +101,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "7c97ef34-95e2-4356-8c42-3ea053a08f7c"
   }
 }

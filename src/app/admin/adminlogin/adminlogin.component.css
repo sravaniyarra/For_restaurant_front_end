@@ -1,0 +1,10 @@
+ul{
+    list-style: none;
+}
+body{
+    background-image: url('../../../assets/images/indian-1768906_1920_20180322173733.jpg');
+    background-repeat: no-repeat;
+}
+.form-label{
+    color: azure;
+}

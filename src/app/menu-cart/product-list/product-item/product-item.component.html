@@ -1,0 +1,36 @@
+
+<div class="card mb-4 shadow-sm">
+  <img class="bd-placeholder-img card-img-top p-2" width="100%" [src]="productItem.imageUrl" />
+
+  <div class="card-body">
+    <p class="card-text">
+      <strong>{{ productItem.price | currency:'INR' }}</strong>
+      <i *ngIf="addedToWishlist" class="fas fa-heart float-right" (click)="handleRemoveFromWishlist()"></i>
+      <i *ngIf="!addedToWishlist" class="far fa-heart float-right" (click)="handleAddToWishlist()"></i>
+    </p>
+    <p class="card-text">{{productItem.name}}</p>
+    <p class="card-text">{{productItem.description}}</p>
+    <div class="rate">
+      <input type="radio" id="star5" name="rate" value="5" />
+      <label for="star5" title="text">5 stars</label>
+      <input type="radio" id="star4" name="rate" value="4" />
+      <label for="star4" title="text">4 stars</label>
+      <input type="radio" id="star3" name="rate" value="3" />
+      <label for="star3" title="text">3 stars</label>
+      <input type="radio" id="star2" name="rate" value="2" />
+      <label for="star2" title="text">2 stars</label>
+      <input type="radio" id="star1" name="rate" value="1" />
+      <label for="star1" title="text">1 star</label>
+    </div>
+    <br> 
+    <br>
+   <!-- <p class="card-text">{{ productItem.description}}</p>-->
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="btn-group">
+     <!--   <button type="button" class="btn btn-sm btn-primary product-btn" (click)="handleAddToCart()">Add to
+          Cart</button> -->
+        <button type="button" class="btn btn-sm btn-success product-btn">View Details</button>
+      </div>
+    </div>
+  </div>
+</div> 

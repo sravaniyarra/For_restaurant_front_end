@@ -1,0 +1,195 @@
+<ng-container *ngIf="cartItems.length!=0">
+  <div class="container">
+    <div class="card-table">
+        <div class="cart-product">
+          <div class="table table-responsive">
+            <thead>
+              <tr>
+                <th>Sr.No</th>
+                <th>Product Name</th>
+                <th>Product Image</th>
+                <th>Description</th>
+                <th>Price</th>
+              <!--  <th>Quantity</th> -->
+                <th>Total</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of cartItems;let i = index">
+                <td>{{i+1}}</td>
+                <td>{{item.name}}</td>
+                <td><img style="width: 120px;" src="{{item.imageUrl}}"></td>
+                <td>{{item.description}}</td>
+                <td>{{item.price}}</td>
+                <!--<td>{{item.qty}}</td> -->
+                <td>{{item.price}}</td>
+                <td>
+                  <button (click)="removeItem(item)" class="btn btn-danger">
+                    <i class="fas fa-trash-alt"></i>
+                  </button>
+                </td>
+               
+
+              </tr>
+              <tr>
+                <td colspan="3"></td>
+                <td><button (click)="emptyCart()" class="btn btn-danger">Empty cart</button></td>
+                <td><button routerLink ="/menu-cart" class="btn btn-primary">Order More</button></td>
+                <td><button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Place Order</button></td>
+                  <!-- Button trigger modal -->
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Enter Shipment Address</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formdata" >
+          <div class="row">
+              <div class="col">
+                <label class="labelclass">Name</label>
+                <input type="text" formControlName  = "name" class="form-control" placeholder="Enter Name" aria-label="First name"  required>
+              </div>
+              <div class="col">
+                <label class="labelclass">House number</label>
+                 <input type="text" formControlName  = "address" class="form-control" placeholder="Enter address" aria-label="address"  required>
+              </div>
+             </div>
+            <div class="row">
+              <div class="col">
+                <label class="labelclass">Phone Number</label>
+                <input type="number" formControlName  = "phonenumber" class="form-control" placeholder="Enter Number"  required>
+              </div>
+              <div class="col">
+                <label class="labelclass">Pincode</label>
+                <input type="number" formControlName  = "pincode" class="form-control" placeholder="Enter pincode"  required>
+              </div></div>
+              <div class="row">
+                <div class="col">
+                  <label class="labelclass">State</label>
+                  <input type="number" formControlName  = "state" class="form-control" placeholder="Enter Number"  required>
+                </div>
+                <div class="col">
+                  <label class="labelclass">City</label>
+                  <input type="number" formControlName  = "city" class="form-control" placeholder="Enter pincode"  required>
+                </div></div>
+              <div class="row">
+              <div class="col">
+                <label>Payment Method</label><br>
+                <input type="radio" id="Offline" formControlName  = "fav_language" name="fav_language" value="HTML">
+                <label for="offline">Cash On Delivery(COD)</label><br>
+                <input type="radio" id="online" formControlName  = "fav_language" name="fav_language" value="CSS">
+                <label for="css">Online payment</label><br>
+                <input type="radio" id="card" formControlName  = "fav_language" name="fav_language" value="JavaScript">
+                <label for="card">Payment through Debit or Credit Card</label>
+              </div>
+            </div>
+            <div class="modal-footer">
+    
+            <button type="submit" class="btn btn-success" type="button" (click)="onSubmit()">Submit Details</button>
+          </div>
+      </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+                 <td><strong>Grand Total : {{cartTotal | currency : 'INR'}}</strong></td>
+              </tr>
+            </tbody>
+
+
+
+
+          </div>
+        </div>
+       </div>
+      </div>
+</ng-container>
+
+
+
+
+<ng-container *ngIf="cartItems.length===0">
+  <div class="container">
+    <div class="card">
+      <h5 class="card-title">My Cart</h5>
+   </div>
+  <div class="center">
+    <img src="../../../assets/images/c60fea3ac3aab2e82c2f7ea901ef55f6.jpg" alt="">
+    <h4>Your Cart is empty !!</h4>
+    <h6>Add items to it now</h6>
+    <button routerLink ="/menu-cart" class="btn btn-primary order">Order more</button>
+  </div>
+  
+
+
+
+
+
+
+
+
+
+<!--<h1 style="text-align: center;" ><strong>&hearts;Your Cart Items &hearts;</strong> </h1>
+<button routerLink="/product-list" class="btn btn-success" >Back</button>  
+
+
+<div *ngIf="cartItems.length === 0" class="alert alert-info">Your Cart is Empty.</div>
+
+<ul *ngIf="cartItems.length > 0" class="list-group">
+  <li class="list-group-item" *ngFor="let item of cartItems">
+    <app-cart-item [cartItem]="item"></app-cart-item>
+  </li>
+
+  <li class="list-group-item active">
+    <strong>Grand Total</strong> {{ cartTotal | currency:'INR' }}
+  </li>
+
+  <li class="list-group-item active">
+    <button type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn order">Place Order</button>
+       Button trigger modal -->
+<!--<td><button type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-success">Place Order</button></td>
+
+       Button trigger modal 
+
+  
+  Modal 
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Enter Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+             <form action=""  [formGroup] = "addressForm">
+                 <label for="name">Name</label>
+                 <input type="string" formControlName="name" id="name" minlength="3" maxlength="20" required>
+                 <span class="text-danger" *ngIf="this.addressForm.get('name').touched">Name is required</span>
+                 <label>Name</label> 
+                 <label>Name</label>
+                 <label>Name</label>
+
+
+             </form>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div> 
+  
+  </li>
+</ul>-->

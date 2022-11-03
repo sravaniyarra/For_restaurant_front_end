@@ -1,0 +1,17 @@
+.input-group{
+  margin-top: 2%;
+  margin-left: 70%;
+  width: 400px;
+ 
+}
+.modal-title{
+    text-align: center;
+}
+.btn{
+    display: flex;
+    margin-left: auto;
+    margin-top: 10px;
+    height: 40px;
+    border-radius: 10px;
+
+}
